@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap");
+
+.header {
+  position: relative;
+  height: 250px;
+}
+
+.icon {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 125px;
+  left: 150px;
+}
+
+.profArea {
+  position: absolute;
+  left: 500px;
+  top: 270px;
+  font-family: "Zen Maru Gothic", sans-serif;
+}
+
+.name {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.birthday {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.bio {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 22px;
+}
