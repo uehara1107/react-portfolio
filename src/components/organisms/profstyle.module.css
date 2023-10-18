@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap");
-
 .header {
-  position: relative;
   height: 250px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
 }
 
 .icon {
@@ -10,15 +12,11 @@
   width: 300px;
   object-fit: cover;
   border-radius: 50%;
-  position: absolute;
-  top: 125px;
-  left: 150px;
+  margin-top: -100px; /* これでアイコンをヘッダーの上に重ねる */
+  margin-right: 24px; /* profAreaとの間隔 */
 }
 
 .profArea {
-  position: absolute;
-  left: 500px;
-  top: 270px;
   font-family: "Zen Maru Gothic", sans-serif;
 }
 
