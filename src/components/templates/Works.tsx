@@ -1,10 +1,11 @@
-import { Box, Text } from "@chakra-ui/react";
 import { FC } from "react";
+import WorksList from "../organisms/worksList";
+import { workContent } from "../../data/works";
 
 const Works: FC = () => (
-  <Box>
-    <Text>わーくす</Text>
-  </Box>
+  <div>
+    <WorksList contents={workContent} />
+  </div>
 );
 
 export default Works;
