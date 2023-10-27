@@ -1,0 +1,39 @@
+.header {
+  height: 250px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -100px; /* これでアイコンをヘッダーの上に重ねる */
+  margin-right: 24px; /* profAreaとの間隔 */
+}
+
+.profArea {
+  font-family: "Zen Maru Gothic", sans-serif;
+}
+
+.name {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.birthday {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.bio {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 22px;
+}
