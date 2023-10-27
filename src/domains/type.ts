@@ -9,7 +9,12 @@ export interface AboutContent {
 
 export interface WorkContent {
   id: string;
-  img: string;
+  title: string;
+  productImg: string;
+  iconImg: string;
+  date: string;
+  fav: number;
+  comment: number;
   detail: string;
-  tag?: string[];
+  tag: string[];
 }
