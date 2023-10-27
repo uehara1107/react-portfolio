@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Box, Input, Flex, Button } from "@chakra-ui/react";
 import WorkCard from "../atoms/workCard";
 import { WorkContent } from "../../domains/type";
+import style from "./worksListstyle.module.css";
 
 type WorkListProps = {
   contents: WorkContent[];
@@ -31,9 +32,10 @@ const WorkList: React.FC<WorkListProps> = ({ contents }) => {
 
   return (
     <Box>
-      <Flex mb={4}>
+      <Flex justify={"center"} className={style.searchbar}>
         <Input
           placeholder="タイトルを検索"
+          className={style.search}
           value={searchTerm}
           onChange={(e) => {
             setSearchTerm(e.target.value);
@@ -42,10 +44,11 @@ const WorkList: React.FC<WorkListProps> = ({ contents }) => {
         />
       </Flex>
 
-      <Flex mb={4} wrap="wrap">
+      <Flex mb={4} wrap="wrap" justify={"center"} className={style.tagArea}>
         {uniqueTags.map((tag) => (
           <Button
             key={tag}
+            className={`${style.buttonTag} ${style[tag]}`}
             onClick={() => {
               setSelectedTag(tag);
               handleSearch(searchTerm, tag);
@@ -61,12 +64,13 @@ const WorkList: React.FC<WorkListProps> = ({ contents }) => {
             setSelectedTag(null);
             handleSearch(searchTerm, null);
           }}
+          className={style.resetButton}
         >
           リセット
         </Button>
       </Flex>
 
-      <Flex mb={4} wrap="wrap" flexDirection="row">
+      <Flex wrap="wrap" flexDirection="row" mb={4}>
         {filteredContents.map((content) => (
           <WorkCard key={content.id} content={content} />
         ))}

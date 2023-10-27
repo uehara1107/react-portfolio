@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Box, Image, Text, Badge, Flex, Button } from "@chakra-ui/react";
 import { WorkContent } from "../../domains/type";
 import WorkDetailModal from "../organisms/workDetailModal";
+import style from "./workCardStyle.module.css";
 
 type WorkCardProps = {
   content: WorkContent;
@@ -15,14 +16,14 @@ const WorkCard: React.FC<WorkCardProps> = ({ content }) => {
 
   return (
     <Box borderWidth="1px" borderRadius="lg" overflow="hidden">
-      <Button onClick={handleOpen} w="100%">
+      <Button onClick={handleOpen} className={style.customButton}>
         <Box borderWidth="1px" borderRadius="lg" overflow="hidden">
           <Box p="6">
-            <Image src={content.iconImg} alt="icon" boxSize="50px" />
-            <Text mt="2" fontWeight="bold" fontSize="xl">
-              {content.title}
-            </Text>
-            <Flex mt="2">
+            <Flex alignItems="center" className={style.cardHeader}>
+              <Image src={content.iconImg} alt="icon" className={style.icon} />
+              <Text className={style.title}>{content.title}</Text>
+            </Flex>
+            <Flex className={style.tag}>
               {content.tag.map((t, index) => (
                 <Badge
                   key={index}

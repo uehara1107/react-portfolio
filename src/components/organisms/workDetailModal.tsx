@@ -8,6 +8,7 @@ import {
   Image,
   Text,
   Box,
+  Flex,
 } from "@chakra-ui/react";
 import { WorkContent } from "../../domains/type";
 
@@ -27,15 +28,30 @@ const WorkDetailModal: React.FC<WorkDetailModalProps> = ({
       <ModalOverlay />
       <ModalContent bg="white">
         <ModalCloseButton size="5px" />
-        <ModalHeader>{content.title}</ModalHeader>
+        <ModalHeader>
+          <Flex justifyContent="center" alignItems="center">
+            {content.title}
+          </Flex>
+        </ModalHeader>
 
         <ModalBody>
-          <Image src={content.productImg} alt={content.title} boxSize="300px" />
-          <Box mt="4">
-            <Text>{content.detail}</Text>
-            <Text mt="4">Date: {content.date}</Text>
-            {/* その他の情報もこちらに表示できます */}
-          </Box>
+          <Flex
+            direction="column"
+            alignItems="center"
+            justifyContent="center"
+            height="100%"
+          >
+            <Image
+              src={content.productImg}
+              alt={content.title}
+              boxSize="300px"
+            />
+            <Box mt="4">
+              <Text>{content.detail}</Text>
+              <Text mt="4">Date: {content.date}</Text>
+              {/* その他の情報もこちらに表示できます */}
+            </Box>
+          </Flex>
         </ModalBody>
       </ModalContent>
     </Modal>

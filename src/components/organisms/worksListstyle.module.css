@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap");
+
+body {
+  font-family: "Kiwi Maru", serif;
+  font-family: "Zen Maru Gothic", serif;
+}
+
+.searchbar {
+  background-color: #00e39f;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.search {
+  border-radius: 15px;
+  color: #323232;
+  padding: 10px 25px;
+  transition: all 0.3s;
+  border: 1px solid #d9d9d9; /* 枠の色を設定 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Kiwi Maru", serif;
+  font-family: "Zen Maru Gothic", serif;
+}
+
+.tagArea {
+  background-color: #00e39f;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.buttonTag {
+  border-radius: 20px;
+  color: white;
+  padding: 5px 15px;
+  transition: all 0.3s;
+  border: 1px solid #d9d9d9; /* 枠の色を設定 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Kiwi Maru", serif;
+  font-family: "Zen Maru Gothic", serif;
+}
+
+.resetButton {
+  border-radius: 20px;
+  color: #323232;
+  background-color: #d9d9d9;
+  padding: 5px 15px;
+  transition: all 0.3s;
+  border: 1px solid #d9d9d9; /* 枠の色を設定 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Kiwi Maru", serif;
+  font-family: "Zen Maru Gothic", serif;
+}
+
+.resetButton:hover {
+  transform: scale(1.1);
+}
+
+.buttonTag:hover {
+  transform: scale(1.1);
+}
+
+.web {
+  background-color: #ff6b6b;
+}
+
+.procon {
+  background-color: #ff9642;
+}
+
+.logo {
+  background-color: #a66dfa;
+}
+
+.Android {
+  background-color: #5db2ff;
+}

@@ -1,61 +1,53 @@
 import { FC } from "react";
-import { Box, Link } from "@chakra-ui/react";
+import { Box, Text, Image, Button, Flex } from "@chakra-ui/react";
 import contactstyle from "./contactstyle.module.css";
 
 const ContactList: FC = () => {
+  const openTwitter = () => {
+    window.open("https://twitter.com/Ueharrrr165");
+  };
+  const openGithub = () => {
+    window.open("https://github.com/uehara1107");
+  };
+  const openInstagram = () => {
+    window.open("https://www.instagram.com/poppo_film/");
+  };
   return (
     <Box className={contactstyle.component}>
-      <Box className={contactstyle.overlap}>
-        <Link
-          href="https://twitter.com/Ueharrrr165"
-          className={contactstyle.textWrapper}
-        >
-          X(旧Twitter):@ueharrrr165
-        </Link>
-        <Box className={contactstyle.overlapGroup}>
-          <Box
-            as="img"
+      <Button onClick={openTwitter} className={contactstyle.customButton}>
+        <Flex className={contactstyle.card}>
+          <Image
             src="../../../public/assets/graypic.png"
             alt="ellipse"
-            className={contactstyle.ellipse}
+            className={contactstyle.icon}
           />
-          <Box className={contactstyle.line} />
-        </Box>
-      </Box>
-      <Box className={contactstyle.overlap}>
-        <Link
-          href="https://github.com/uehara1107"
-          className={contactstyle.textWrapper}
-        >
-          Github:uehara1107
-        </Link>
-        <Box className={contactstyle.overlapGroup}>
-          <Box
-            as="img"
+          <Text className={contactstyle.textWrapper}>
+            X(旧Twitter):@ueharrrr165
+          </Text>
+        </Flex>
+      </Button>
+      <Button onClick={openGithub} className={contactstyle.customButton}>
+        <Flex className={contactstyle.card}>
+          <Image
             src="../../../public/assets/graypic.png"
             alt="ellipse"
-            className={contactstyle.ellipse}
+            className={contactstyle.icon}
           />
-          <Box className={contactstyle.line} />
-        </Box>
-      </Box>
-      <Box className={contactstyle.overlap}>
-        <Link
-          href="https://www.instagram.com/poppo_film/"
-          className={contactstyle.textWrapper}
-        >
-          Instagram(フィルム写真)：poppo_film
-        </Link>
-        <Box className={contactstyle.overlapGroup}>
-          <Box
-            as="img"
+          <Text className={contactstyle.textWrapper}>Github:uehara1107</Text>
+        </Flex>
+      </Button>
+      <Button onClick={openInstagram} className={contactstyle.customButton}>
+        <Flex className={contactstyle.card}>
+          <Image
             src="../../../public/assets/graypic.png"
             alt="ellipse"
-            className={contactstyle.ellipse}
+            className={contactstyle.icon}
           />
-          <Box className={contactstyle.line} />
-        </Box>
-      </Box>
+          <Text className={contactstyle.textWrapper}>
+            Instagram(フィルム写真)：poppo_film
+          </Text>
+        </Flex>
+      </Button>
     </Box>
   );
 };
