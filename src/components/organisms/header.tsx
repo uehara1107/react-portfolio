@@ -16,7 +16,7 @@ const Header: FC = () => (
     >
       <Box className={headerstyle.headerlink}>
         <NavLink
-          to={"/about"}
+          to={"/"}
           className={({ isActive }) =>
             isActive ? headerstyle["active-link"] : ""
           }
@@ -46,7 +46,7 @@ const Header: FC = () => (
       </Box>
     </HStack>
     <Routes>
-      <Route path={"/about"} element={<About />}></Route>
+      <Route path={"/"} element={<About />}></Route>
       <Route path={"/works"} element={<Works />}></Route>
       <Route path={"/contact"} element={<Contact />}></Route>
     </Routes>
