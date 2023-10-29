@@ -1,19 +1,23 @@
 import { FC } from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 import profstyle from "./profstyle.module.css";
 
 const Profile: FC = () => (
-  <div>
+  <Box>
     <Box className={profstyle.header} bg="#00E39F" w="100%" />
-    <div className={profstyle.content}>
-      <img className={profstyle.icon} src="./assets/graypic.png" />
+    <Box className={profstyle.content} display="flex">
+      <Image
+        className={profstyle.icon}
+        src="./assets/graypic.png"
+        alt="Profile Icon"
+      />
       <Box className={profstyle.profArea}>
-        <p className={profstyle.name}>UEHARA Sumika</p>
-        <p className={profstyle.birthday}>2002.11.07</p>
-        <p className={profstyle.bio}>自由に楽しく生きる</p>
+        <Text className={profstyle.name}>UEHARA Sumika</Text>
+        <Text className={profstyle.birthday}>2002.11.07</Text>
+        <Text className={profstyle.bio}>自由に楽しく生きる</Text>
       </Box>
-    </div>
-  </div>
+    </Box>
+  </Box>
 );
 
 export default Profile;

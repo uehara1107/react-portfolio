@@ -1,5 +1,5 @@
 import { FC } from "react";
-//import { AboutContent } from "../../domains/type";
+import { Box, Image, Text } from "@chakra-ui/react";
 import { aboutContentData } from "../../data/aboutcontents";
 import startStyle from "./start.module.css";
 import middleStyle from "./middle.module.css";
@@ -7,87 +7,45 @@ import endStyle from "./end.module.css";
 
 const AboutContentList: FC = () => {
   return (
-    <div>
+    <Box>
       {aboutContentData.map((content) => {
+        let style;
         switch (content.id) {
           case "start":
-            return (
-              <div className={startStyle.component}>
-                <div className={startStyle.overlap}>
-                  <div className={startStyle.textWrapper}>{content.detail}</div>
-                  <div className={startStyle.div}>{content.comment}</div>
-                  <div className={startStyle.overlapGrupe}>
-                    <img
-                      className={startStyle.ellipse}
-                      alt="photo"
-                      src={content.img}
-                    />
-                    <div className={startStyle.line} />
-                    <div className={startStyle.border} />
-                    <div className={startStyle.line2} />
-                  </div>
-                  <img
-                    className={startStyle.sms}
-                    alt="Sms"
-                    src="./assets/sms.svg"
-                  />
-                </div>
-              </div>
-            );
+            style = startStyle;
+            break;
           case "middle":
-            return (
-              <div className={middleStyle.component}>
-                <div className={middleStyle.overlap}>
-                  <div className={middleStyle.textWrapper}>
-                    {content.detail}
-                  </div>
-                  <div className={middleStyle.div}>{content.comment}</div>
-                  <div className={middleStyle.overlapGrupe}>
-                    <img
-                      className={middleStyle.ellipse}
-                      alt="photo"
-                      src={content.img}
-                    />
-                    <div className={middleStyle.line} />
-                    <div className={middleStyle.border} />
-                    <div className={middleStyle.line2} />
-                  </div>
-                  <img
-                    className={middleStyle.sms}
-                    alt="Sms"
-                    src="./assets/sms.svg"
-                  />
-                </div>
-              </div>
-            );
+            style = middleStyle;
+            break;
           case "end":
-            return (
-              <div className={endStyle.component}>
-                <div className={endStyle.overlap}>
-                  <div className={endStyle.textWrapper}>{content.detail}</div>
-                  <div className={endStyle.div}>{content.comment}</div>
-                  <div className={endStyle.overlapGrupe}>
-                    <img
-                      className={endStyle.ellipse}
-                      alt="photo"
-                      src={content.img}
-                    />
-                    <div className={endStyle.line} />
-                    <div className={endStyle.border} />
-                    <div className={endStyle.border2} />
-                    <div className={endStyle.line2} />
-                  </div>
-                  <img
-                    className={endStyle.sms}
-                    alt="Sms"
-                    src="./assets/sms.svg"
-                  />
-                </div>
-              </div>
-            );
+            style = endStyle;
+            break;
+          default:
+            return null;
         }
+
+        return (
+          <Box className={style.component} key={content.id}>
+            <Box className={style.overlap}>
+              <Text className={style.textWrapper}>{content.detail}</Text>
+              <Text className={style.div}>{content.comment}</Text>
+              <Box className={style.overlapGrupe}>
+                <Image
+                  className={style.ellipse}
+                  alt="photo"
+                  src={content.img}
+                />
+                <Box className={style.line} />
+                <Box className={style.border} />
+                {style === endStyle && <Box className={style.border2} />}
+                <Box className={style.line2} />
+              </Box>
+              <Image className={style.sms} alt="Sms" src="./assets/sms.svg" />
+            </Box>
+          </Box>
+        );
       })}
-    </div>
+    </Box>
   );
 };
 

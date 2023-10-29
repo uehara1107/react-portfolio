@@ -12,8 +12,9 @@
   width: 300px;
   object-fit: cover;
   border-radius: 50%;
-  margin-top: -100px; /* これでアイコンをヘッダーの上に重ねる */
-  margin-right: 24px; /* profAreaとの間隔 */
+  margin-top: -145px; /* これでアイコンをヘッダーの上に重ねる */
+  margin-right: 24px;
+  margin-left: 10px;
 }
 
 .profArea {
@@ -23,17 +24,18 @@
 .name {
   font-size: 30px;
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .birthday {
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 20px;
+  margin-left: 2px;
 }
 
 .bio {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 5px;
   font-size: 22px;
 }

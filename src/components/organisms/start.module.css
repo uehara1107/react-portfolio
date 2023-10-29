@@ -23,7 +23,7 @@ body {
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 40px;
+  top: 18px;
 }
 
 .component .div {
@@ -35,7 +35,7 @@ body {
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 88px;
+  top: 70px;
   white-space: nowrap;
 }
 
