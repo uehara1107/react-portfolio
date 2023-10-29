@@ -17,7 +17,7 @@ const ContactList: FC = () => {
       <Button onClick={openTwitter} className={contactstyle.customButton}>
         <Flex className={contactstyle.card}>
           <Image
-            src="../../../public/assets/graypic.png"
+            src="./assets/graypic.png"
             alt="ellipse"
             className={contactstyle.icon}
           />
@@ -29,7 +29,7 @@ const ContactList: FC = () => {
       <Button onClick={openGithub} className={contactstyle.customButton}>
         <Flex className={contactstyle.card}>
           <Image
-            src="../../../public/assets/graypic.png"
+            src="./assets/graypic.png"
             alt="ellipse"
             className={contactstyle.icon}
           />
@@ -39,7 +39,7 @@ const ContactList: FC = () => {
       <Button onClick={openInstagram} className={contactstyle.customButton}>
         <Flex className={contactstyle.card}>
           <Image
-            src="../../../public/assets/graypic.png"
+            src="./assets/graypic.png"
             alt="ellipse"
             className={contactstyle.icon}
           />

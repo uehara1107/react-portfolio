@@ -29,7 +29,7 @@ const AboutContentList: FC = () => {
                   <img
                     className={startStyle.sms}
                     alt="Sms"
-                    src="../../../public/assets/sms.svg"
+                    src="./assets/sms.svg"
                   />
                 </div>
               </div>
@@ -55,7 +55,7 @@ const AboutContentList: FC = () => {
                   <img
                     className={middleStyle.sms}
                     alt="Sms"
-                    src="../../../public/assets/sms.svg"
+                    src="./assets/sms.svg"
                   />
                 </div>
               </div>
@@ -80,7 +80,7 @@ const AboutContentList: FC = () => {
                   <img
                     className={endStyle.sms}
                     alt="Sms"
-                    src="../../../public/assets/sms.svg"
+                    src="./assets/sms.svg"
                   />
                 </div>
               </div>
