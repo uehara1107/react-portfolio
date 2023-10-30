@@ -7,9 +7,9 @@ import Works from "../templates/Works";
 import Contact from "../templates/Contact";
 
 const Header: FC = () => (
-  <div>
+  <Box>
     <HStack
-      spacing="100px"
+      spacing="50px"
       className={headerstyle.headerarea}
       justify={"center"}
       bg="#00E39F"
@@ -50,7 +50,7 @@ const Header: FC = () => (
       <Route path={"/works"} element={<Works />}></Route>
       <Route path={"/contact"} element={<Contact />}></Route>
     </Routes>
-  </div>
+  </Box>
 );
 
 export default Header;
