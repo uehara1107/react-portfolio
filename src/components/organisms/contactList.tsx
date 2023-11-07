@@ -12,13 +12,17 @@ const ContactList: FC = () => {
   const openInstagram = () => {
     window.open("https://www.instagram.com/poppo_film/");
   };
+  const openBooth = () => {
+    window.open("https://poppo165.booth.pm/");
+  };
+
   return (
     <Box className={contactstyle.component}>
       <Button onClick={openTwitter} className={contactstyle.customButton}>
         <Flex className={contactstyle.card}>
           <Image
-            src="./assets/graypic.png"
-            alt="ellipse"
+            src="./assets/contactPage/twitter.png"
+            alt="twitter"
             className={contactstyle.icon}
           />
           <Text className={contactstyle.textWrapper}>
@@ -29,8 +33,8 @@ const ContactList: FC = () => {
       <Button onClick={openGithub} className={contactstyle.customButton}>
         <Flex className={contactstyle.card}>
           <Image
-            src="./assets/graypic.png"
-            alt="ellipse"
+            src="./assets/contactPage/github.png"
+            alt="github"
             className={contactstyle.icon}
           />
           <Text className={contactstyle.textWrapper}>Github:uehara1107</Text>
@@ -39,12 +43,24 @@ const ContactList: FC = () => {
       <Button onClick={openInstagram} className={contactstyle.customButton}>
         <Flex className={contactstyle.card}>
           <Image
-            src="./assets/graypic.png"
-            alt="ellipse"
+            src="./assets/contactPage/instagram.png"
+            alt="instagram"
             className={contactstyle.icon}
           />
           <Text className={contactstyle.textWrapper}>
             Instagram(フィルム写真)：poppo_film
+          </Text>
+        </Flex>
+      </Button>
+      <Button onClick={openBooth} className={contactstyle.customButton}>
+        <Flex className={contactstyle.card}>
+          <Image
+            src="./assets/contactPage/booth.png"
+            alt="booth"
+            className={contactstyle.icon}
+          />
+          <Text className={contactstyle.textWrapper}>
+            BOOTH：ぽっぽの好きなものあつめ
           </Text>
         </Flex>
       </Button>

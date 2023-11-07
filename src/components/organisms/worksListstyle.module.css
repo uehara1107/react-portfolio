@@ -31,6 +31,7 @@ body {
 .buttonTag {
   border-radius: 20px;
   color: white;
+  margin-left: 10px;
   padding: 5px 15px;
   transition: all 0.3s;
   border: 1px solid #d9d9d9; /* 枠の色を設定 */
@@ -41,6 +42,7 @@ body {
 
 .resetButton {
   border-radius: 20px;
+  margin-left: 10px;
   color: #323232;
   background-color: #d9d9d9;
   padding: 5px 15px;
@@ -59,18 +61,42 @@ body {
   transform: scale(1.1);
 }
 
-.web {
+.プレゼンター {
   background-color: #ff6b6b;
 }
 
-.procon {
+.高専プロコン {
   background-color: #ff9642;
 }
 
-.logo {
+.ビジネスコンテスト {
   background-color: #a66dfa;
 }
 
 .Android {
+  background-color: rgb(0, 196, 98);
+}
+
+.チームリーダー {
+  background-color: #ff4538;
+}
+
+.Python {
   background-color: #5db2ff;
+}
+
+.プレゼンター {
+  background-color: #ff6ba9;
+}
+
+.Webフロントエンド {
+  background-color: #6542ff;
+}
+
+.イラスト {
+  background-color: #59e720;
+}
+
+.ロゴ {
+  background-color: #207de7;
 }

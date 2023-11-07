@@ -10,11 +10,15 @@ export interface AboutContent {
 export interface WorkContent {
   id: string;
   title: string;
+  topProductImg: string;
   productImg: string;
   iconImg: string;
+  team: string;
+  role: string[];
   date: string;
   fav: number;
   comment: number;
   detail: string;
   tag: string[];
+  award: string[];
 }

@@ -36,7 +36,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ content }) => {
               ))}
             </Flex>
             <Image
-              src={content.productImg}
+              src={content.topProductImg}
               alt={content.title}
               boxSize="300px"
             />

@@ -13,15 +13,14 @@ body {
   border-radius: 10px; /* 任意の幅に変更可能 */
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 100%;
 }
 
 .icon {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+  width: auto;
+  height: 80px;
   margin-right: 20px;
 }
 
@@ -34,8 +33,4 @@ body {
   font-size: 20pt;
   font-family: "Kiwi Maru", serif;
   font-family: "Zen Maru Gothic", serif;
-}
-
-.component {
-  margin-top: 80px;
 }

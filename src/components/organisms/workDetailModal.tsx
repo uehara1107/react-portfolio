@@ -9,6 +9,8 @@ import {
   Text,
   Box,
   Flex,
+  ListItem,
+  UnorderedList,
 } from "@chakra-ui/react";
 import { WorkContent } from "../../domains/type";
 
@@ -24,32 +26,53 @@ const WorkDetailModal: React.FC<WorkDetailModalProps> = ({
   content,
 }) => {
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
-      <ModalOverlay />
-      <ModalContent bg="white">
-        <ModalCloseButton size="5px" />
+    <Modal
+      isOpen={isOpen}
+      onClose={onClose}
+      size="full"
+      scrollBehavior="inside"
+    >
+      <ModalOverlay bg="rgba(255, 255, 255, 0.8)" />
+      <ModalContent
+        bg="white"
+        width="600px" // モーダルの横幅を指定
+        maxWidth="600px" // モーダルの最大横幅を指定
+        maxHeight="100vh" // モーダルの最大高さをビューポートの高さに設定
+        overflowY="auto" // 縦スクロールを有効にする
+        mx="auto" // 横のマージンを自動に設定して中央に配置
+        my="4" // 上下のマージンを設定
+      >
+        <ModalCloseButton />
         <ModalHeader>
           <Flex justifyContent="center" alignItems="center">
             {content.title}
           </Flex>
         </ModalHeader>
-
         <ModalBody>
-          <Flex
-            direction="column"
-            alignItems="center"
-            justifyContent="center"
-            height="100%"
-          >
+          <Flex direction="column" alignItems="center" justifyContent="center">
             <Image
               src={content.productImg}
               alt={content.title}
               boxSize="300px"
             />
-            <Box mt="4">
+            <Box m="4">
               <Text>{content.detail}</Text>
-              <Text mt="4">Date: {content.date}</Text>
-              {/* その他の情報もこちらに表示できます */}
+              <Text mt="4">期間：{content.date}</Text>
+              <Text mt="4">開発チーム：{content.team}</Text>
+              <Text mt="4">役割</Text>
+              <UnorderedList>
+                {content.role &&
+                  content.role.map((role, index) => (
+                    <ListItem key={index}>{role}</ListItem>
+                  ))}
+              </UnorderedList>
+              <Text mt="4">頂いた賞</Text>
+              <UnorderedList>
+                {content.award &&
+                  content.award.map((award, index) => (
+                    <ListItem key={index}>{award}</ListItem>
+                  ))}
+              </UnorderedList>
             </Box>
           </Flex>
         </ModalBody>

@@ -59,7 +59,6 @@ const WorkList: React.FC<WorkListProps> = ({ contents }) => {
         ))}
 
         <Button
-          ml={2}
           onClick={() => {
             setSelectedTag(null);
             handleSearch(searchTerm, null);

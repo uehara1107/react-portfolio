@@ -171,7 +171,7 @@ export const aboutContentData: AboutContent[] = [
   },
   {
     id: "end",
-    img: "./assets/aboutPage/img7.jpg",
+    img: "./assets/aboutPage/img35.JPG",
     detail: "プロダクト詳細はぜひworksをご覧ください",
     comment: 0,
   },
