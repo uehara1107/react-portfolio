@@ -34,7 +34,7 @@ const WorkList: React.FC<WorkListProps> = ({ contents }) => {
     <Box>
       <Flex justify={"center"} className={style.searchbar}>
         <Input
-          placeholder="タイトルを検索"
+          placeholder="タイトルで検索"
           className={style.search}
           value={searchTerm}
           onChange={(e) => {

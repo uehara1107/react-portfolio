@@ -17,13 +17,13 @@ body {
 
 .component .textWrapper {
   color: #000000;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   left: 118px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 18px;
+  top: 20px;
 }
 
 .component .div {

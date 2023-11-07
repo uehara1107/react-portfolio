@@ -8,7 +8,7 @@ const Profile: FC = () => (
     <Box className={profstyle.content} display="flex">
       <Image
         className={profstyle.icon}
-        src="./assets/graypic.png"
+        src="./assets/topImg.jpg"
         alt="Profile Icon"
       />
       <Box className={profstyle.profArea}>
